@@ -11,5 +11,6 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/DjStiff50/FreeCodeCamp_backEnd_1.git"
-	}
+	},
+	"description": "Description Test"
 }
