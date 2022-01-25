@@ -1,5 +1,9 @@
+//https://harmonious-daffy-quesadilla.glitch.me
 var express = require("express");
 var app = express();
+
+app.use('/public',express.static(__dirname + "/public"));
+app.use('/views',express.static(__dirname + "/views"));
 
 app.get('/json',function(req,res,next) {
   console.log(req.method + " " + req.path + " - " + req.ip);
@@ -7,12 +11,11 @@ app.get('/json',function(req,res,next) {
 });
 app.get('/now',function(req,res,next) {
   req.time = new Date().toString();
+  console.log(req.time);
   next();
 }, function (req,res){
   req.setEncoding({time : req.time})
 });
-app.use('/public',express.static(__dirname + "/public"));
-app.use('/views',express.static(__dirname + "/views"));
 
 
 module.exports = app;
