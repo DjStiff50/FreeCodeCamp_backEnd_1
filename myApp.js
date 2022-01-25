@@ -16,6 +16,7 @@ app.get(
     next();
   },
   (req, res) => {
+    console.log(req.time);
     res.send({
       time: req.time
     });
