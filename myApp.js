@@ -14,7 +14,7 @@ app.get('/now',function(req,res,next) {
   console.log(req.time);
   next();
 }, function (req,res){
-  req.setEncoding({time : req.time})
+  req.send({time : req.time})
 });
 
 
