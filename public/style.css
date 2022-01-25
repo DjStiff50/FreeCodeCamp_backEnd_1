@@ -1,11 +1,16 @@
-/* styles */
-/* called by your view template */
-
-* {
-  box-sizing: border-box;
+/* the 'body' selector is required for the tests to pass */
+/* You can change the style attributes if you want */
+body {
+  background-color: #222;
+  color: #ddd;
+  text-align: center;
+  font-family: sans-serif;
 }
 
-body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+h1 {
+  font-size: 4em;
+}
+
+input[type=text], label {
+  margin-bottom: 8px;
 }
