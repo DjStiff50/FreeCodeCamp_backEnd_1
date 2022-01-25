@@ -12,7 +12,7 @@ app.use('/views',express.static(__dirname + "/views"));
 app.get(
   "/now",
   (req, res, next) => {
-    req.time = new Date().toString();
+    req.time = "example"
     next();
   },
   (req, res) => {
